@@ -31,11 +31,11 @@ public class Character extends MovingImage {
 		
 		if(xAcc > 0 && xCoord + width < 800) { //Moves right
 			super.setImage(images[0]);
-			xVelocity = 2;
+			xVelocity = 5;
 		}
 		else if (xAcc < 0 && xCoord > 0){ //Moves left
 			super.setImage(images[2]);
-			xVelocity = -2;
+			xVelocity = -5;
 		}
 		moveToLocation(xCoord + xVelocity, getY());
 		xVelocity = 0;
@@ -49,11 +49,11 @@ public class Character extends MovingImage {
 		
 		if(yAcc > 0 && yCoord > 0) { //Moves up
 			super.setImage(images[4]);
-			yVelocity = -2;
+			yVelocity = -5;
 		}
 		else if(yAcc < 0 && yCoord + height < 600) { //Moves down
 			super.setImage(images[6]);
-			yVelocity = 2;
+			yVelocity = 5;
 		}
 		
 		moveToLocation(getX(), yCoord + yVelocity);
