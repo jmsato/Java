@@ -8,14 +8,15 @@ import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.*;
-import Character.Trainer;
+
+import Character.Lucas;
 
 public class GamePanel extends JPanel implements Runnable {
 
 	public static final int DRAWING_WIDTH = 800;
 	public static final int DRAWING_HEIGHT = 600;
 			
-	private Trainer player = new Trainer(400, 300);
+	private Lucas player = new Lucas(400, 300);
 	
 	public GamePanel() {
 		super();
@@ -75,25 +76,27 @@ public class GamePanel extends JPanel implements Runnable {
 
 		@Override
 		public void keyPressed(KeyEvent e) {
-			if(e.getKeyCode() == KeyEvent.VK_LEFT) {
+			int code = e.getKeyCode();
+			if(code == KeyEvent.VK_LEFT) {
 				right = false;
 				player.walkX(-10);
 			}
-			else if(e.getKeyCode() == KeyEvent.VK_RIGHT) {
+			else if(code == KeyEvent.VK_RIGHT) {
 				right = true;
 				player.walkX(10);
 			}
-			else if(e.getKeyCode() == KeyEvent.VK_UP) {
+			else if(code == KeyEvent.VK_UP) {
 				down = false;
 				player.walkY(10);
 			}
-			else if(e.getKeyCode() == KeyEvent.VK_DOWN) {
+			else if(code == KeyEvent.VK_DOWN) {
 				down = true;
 				player.walkY(-10);
 			}
 			else {
 				player.setImage(player.getCertainImage(1));
 			}
+			repaint();
 		}
 
 		@Override
