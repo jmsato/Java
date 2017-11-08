@@ -101,6 +101,8 @@ public class GamePanel extends JPanel implements Runnable {
 
 		@Override
 		public void keyReleased(KeyEvent e) {
+			ImageIcon i;
+			JLabel label = new JLabel();
 			if(e.getKeyCode() == KeyEvent.VK_LEFT) {
 				right = false;
 				player.setImage(player.getCertainImage(3));
@@ -115,6 +117,13 @@ public class GamePanel extends JPanel implements Runnable {
 			}
 			else if(e.getKeyCode() == KeyEvent.VK_DOWN) {
 				down = false;
+				//
+				i = new ImageIcon(player.getCertainImage(7));
+				label.setIcon(i);
+				add(label);
+				label.setLocation((int)player.getX(), (int)player.getY() + 5);
+				label.setVisible(true);
+				//
 				player.setImage(player.getCertainImage(7));
 			}
 		}

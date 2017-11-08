@@ -12,6 +12,15 @@ public class Character extends MovingImage {
 	
 	//Constructor
 	//FileNames order: Walk right, face right, walk left, ,face left, walk up, face up, walk down, face down
+	/**
+	 * Constructor for a character.
+	 * 
+	 * @param filenames Array of image file names to be used while the character moves
+	 * @param x Starting x-coordinate of the character
+	 * @param y Starting y-coordinate of the character
+	 * @param w Width of the character
+	 * @param h Height of the character
+	 */
 	public Character(String[] filenames, int x, int y, int w, int h) {
 		super(filenames[filenames.length - 1], x, y, w, h);
 		images = new Image[filenames.length];
@@ -22,7 +31,12 @@ public class Character extends MovingImage {
 		yVelocity = 0;
 	}
 	
-	//Methods	
+	//Methods
+	/**
+	 * Moves the character in the x direction.
+	 * 
+	 * @param amount Determines the direction the character moves in, left or right.
+	 */
 	public void walkX(double amount) {
 		double xCoord = getX();
 		double width = getWidth();
@@ -41,6 +55,11 @@ public class Character extends MovingImage {
 		xVelocity = 0;
 	}
 	
+	/**
+	 * Moves the character in the y direction.
+	 * 
+	 * @param amount Determines the direction the character moves in, up or down.
+	 */
 	public void walkY(double amount) {
 		yAcc = amount;
 		
