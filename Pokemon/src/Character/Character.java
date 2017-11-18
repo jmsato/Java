@@ -11,7 +11,7 @@ public class Character extends MovingImage {
 	protected double xAcc, yAcc;
 	
 	//Constructor
-	//FileNames order: Walk right, face right, walk left, ,face left, walk up, face up, walk down, face down
+	//FileNames order: Walk right, face right, walk left, face left, walk up, face up, walk down, face down
 	/**
 	 * Constructor for a character.
 	 * 

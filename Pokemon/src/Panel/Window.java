@@ -20,7 +20,8 @@ public class Window extends JFrame {
 		battle = new BattlePanel(this);
 		
 	    addKeyListener(game.new KeyHandler());
-		setResizable(false);
+		//Change this to true eventually
+	    setResizable(false);
 		
 		setBounds(100, 100, 800, 600);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

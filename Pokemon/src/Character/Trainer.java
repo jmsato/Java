@@ -7,7 +7,7 @@ public class Trainer extends Character {
 	//Constructor
 	//Walk right, face right, walk left, face left, walk up, face up, walk down, face down
 	public Trainer(int x, int y, String[] s) {
-		super(s, x, y, 52, 60);
+		super(s, x, y, 34, 50);
 	}
 	
 	//Methods
